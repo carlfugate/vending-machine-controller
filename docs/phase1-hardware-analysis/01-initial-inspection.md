@@ -93,55 +93,85 @@
 ## Component Map
 
 ```
-[Create a simple ASCII diagram or description of component layout]
+RIGHT SIDE (Main Harness Connectors)
+├── White Connector 1 (Top) - ~20-30 pins
+└── White Connector 2 (Bottom) - ~20-30 pins
+    │
+    └─── All motor wires route here
 
-Top Section:
-- 
+TOP TRAY (5 Motors)
+├── Motor 1 (Left) ──── 3-wire harness (Red/Black/White)
+├── Motor 2 ──────────── 3-wire harness (Red/Black/White)
+├── Motor 3 ──────────── 3-wire harness (Red/Black/White)
+├── Motor 4 ──────────── 3-wire harness (Red/Black/White)
+└── Motor 5 (Right) ──── 3-wire harness (Red/Black/White)
 
-Middle Section:
-- 
+BOTTOM TRAY (5 Motors)
+├── Motor 6 (Left) ──── 3-wire harness (Red/Black/White)
+├── Motor 7 ──────────── 3-wire harness (Red/Black/White)
+├── Motor 8 ──────────── 3-wire harness (Red/Black/White)
+├── Motor 9 ──────────── 3-wire harness (Red/Black/White)
+└── Motor 10 (Right) ─── 3-wire harness (Red/Black/White)
 
-Bottom Section:
-- 
-
+DOOR FRAME
+└── Door Safety Switch (Microswitch)
 ```
 
 ## Initial Observations
 
 ### Motors
-- **Count**: 
-- **Type**: 
-- **Visible Markings**: 
-- **Harness Type**: 
+- **Count**: 10 motors total (5 per tray, 2 trays)
+- **Type**: Small DC gear motors with integrated microswitches
+- **Visible Markings**: No clear part numbers visible in photos
+- **Harness Type**: 3-wire per motor (30 wires total)
+- **Wire Colors**: Red (+12V), Black (GND), White/Yellow (home switch signal)
+- **Mounting**: Each motor bolted to tray, drives spiral dispenser
+- **Home Switch**: Microswitch integrated on each motor assembly
 
 ### Connectors
-- **Main Harness Connectors**: 
-- **Pin Count**: 
-- **Connector Type**: 
+- **Main Harness Connectors**: 2 large white multi-pin connectors on right side
+- **Pin Count**: Estimated 20-30 pins each (40-60 total)
+- **Connector Type**: Standard rectangular housing, appears to be Molex-style
+- **Purpose**: Connect entree unit to main cabinet (power + control signals)
+- **Wire Routing**: All motor harnesses bundle and terminate here
 
 ### Power Supply
-- **Location**: 
-- **Visible Specs**: 
-- **Input Voltage**: 
-- **Output Voltage(s)**: 
+- **Location**: No power supply visible in entree unit
+- **Visible Specs**: N/A - power supplied from main cabinet
+- **Input Voltage**: Comes through main harness connectors
+- **Output Voltage(s)**: Expected 12V DC for motors (standard vending machine)
+- **Distribution**: Power distributed through main harness to all motors
 
 ### Wiring
-- **Wire Gauge**: 
+- **Wire Gauge**: Appears to be 22-24 AWG for motor wires
 - **Color Coding**: 
-- **Routing**: 
+  - Red = Motor power (+12V)
+  - Black = Ground (common)
+  - White/Yellow = Home switch signal (digital input)
+- **Routing**: Clean bundling with tie-downs, routes from motors to right side connectors
+- **Total Wire Count**: 30 motor wires + power rails + door switch = ~35-40 wires
+
+### Door Safety Switch
+- **Type**: Microswitch on door frame
+- **Purpose**: Safety interlock - prevents operation when door open
+- **Wiring**: Likely 2-wire connection to main harness
+- **Location**: Visible in door frame area
 
 ## Questions/Concerns
 
-- 
-- 
-- 
+- **Motor voltage**: Need to verify 12V DC with multimeter testing
+- **Home switch type**: Need to determine normally open (NO) or normally closed (NC)
+- **Connector pinout**: Must trace each wire to identify exact pin assignments
+- **Current draw**: Need to measure motor current for driver sizing
+- **Switch debouncing**: May need software or hardware debouncing for home switches
+- **Door interlock**: Need to understand door switch logic (NO/NC)
 
 ## Next Steps
 
-1. Complete photography of all components
-2. Organize photos in `hardware/photos/` directory
-3. Create detailed component inventory
-4. Move to Task 2: Connector and Wiring Analysis
+1. ✅ Complete photography of all components
+2. ✅ Organize photos in `hardware/photos/` directory
+3. ✅ Create detailed component inventory
+4. **Next**: Move to Task 2: Connector and Wiring Analysis
 
 ## Photos
 
