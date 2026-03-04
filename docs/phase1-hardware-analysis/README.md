@@ -1,66 +1,57 @@
 # Phase 1: Hardware Analysis & Documentation
 
-**Phase Goal**: Safely document all hardware components without applying power
-
-## Overview
-
-This phase focuses on understanding the hardware through visual inspection, photography, and non-invasive testing (continuity checks only). No power will be applied to any components during this phase.
+**Phase Goal**: Safely document all hardware components without applying power  
+**Status**: Mostly Complete - photo analysis and research done, multimeter verification pending
 
 ## Tasks
 
 ### ✅ Completed
 - Project structure created
 - Documentation templates prepared
+- **Task 1**: Initial hardware inspection and photography (23 photos)
+- **Task 3**: Motor and control system research (deep dive document)
+- Component inventory created from photo analysis
+- Wiring diagrams created (estimated, needs verification)
 
-### 🔄 In Progress
-- **Task 1**: Initial Hardware Inspection and Photography
+### ⏳ Pending (Requires Multimeter)
+- **Task 2**: Connector and wiring analysis (need to trace wires to pins)
+- **Task 4**: Power supply analysis (need to verify motor voltage)
 
-### ⏳ Pending
-- **Task 2**: Connector and Wiring Analysis
-- **Task 3**: Motor and Switch Identification
-- **Task 4**: Power Supply Analysis
+## What We Found
 
-## Safety Requirements
+- **10 DC gear motors** (5 per tray × 2 trays)
+- **3-wire harnesses** per motor: Red (power), Black (ground), White (home switch)
+- **Integrated home switches** (microswitch + cam on each motor)
+- **2 main harness connectors** (~40-60 pins total, right side of unit)
+- **Door safety switch** (microswitch on door frame)
+- **No onboard power supply** (power comes from main cabinet via harness)
 
-All work in this phase must follow these safety rules:
+## Key Documents
 
-1. **No Power Applied**: Unit must remain unplugged throughout this phase
-2. **Capacitor Safety**: Check for and discharge any capacitors before touching circuits
-3. **Documentation First**: Photograph before touching or moving anything
-4. **Organized Approach**: Document systematically to avoid missing components
+| Document | Description |
+|----------|-------------|
+| [01-initial-inspection.md](01-initial-inspection.md) | Inspection checklist and findings |
+| [03-motor-and-control-system.md](03-motor-and-control-system.md) | Deep research on motors, switches, VMC architecture |
+| [../../hardware/COMPONENT_INVENTORY.md](../../hardware/COMPONENT_INVENTORY.md) | Full parts inventory |
+| [../../hardware/WIRING_DIAGRAM.md](../../hardware/WIRING_DIAGRAM.md) | System wiring diagrams |
 
-## Expected Deliverables
+## What Still Needs Verification
 
-By the end of Phase 1, we should have:
+All of the following are **estimated from photos and research** but must be confirmed with a multimeter before proceeding to Phase 2:
 
-1. Complete photographic documentation of all components
-2. Component inventory with part numbers
-3. Wiring diagrams showing all connections
-4. Connector pinout documentation
-5. Motor specifications and locations
-6. Power supply specifications
-7. Initial assessment of control requirements
-
-## Key Questions to Answer
-
-- How many motors are present?
-- What type of motors are they? (DC brushed, stepper, etc.)
-- What are the connector pinouts for the main harness?
-- What voltage levels are expected?
-- Are there any existing control boards?
-- What switches are present and what do they detect?
+- Motor voltage (12V or 24V?)
+- Motor winding resistance
+- Home switch type (NO or NC at home position?)
+- Wire function confirmation (Red=power, Black=ground, White=signal)
+- Exact connector pinout (which pin maps to which motor)
+- Whether motor grounds are common or separate
+- Door switch NO/NC state
 
 ## Progress Tracking
 
 | Task | Status | Started | Completed | Notes |
 |------|--------|---------|-----------|-------|
-| Task 1: Initial Inspection | In Progress | 2026-03-01 | - | Template created |
-| Task 2: Wiring Analysis | Not Started | - | - | - |
-| Task 3: Motor Identification | Not Started | - | - | - |
-| Task 4: Power Analysis | Not Started | - | - | - |
-
-## Notes
-
-- This phase is critical for safety in later phases
-- Take time to be thorough - rushing leads to mistakes
-- When in doubt, document more rather than less
+| Task 1: Initial Inspection | ✅ Done | 2026-03-01 | 2026-03-02 | 23 photos, component map |
+| Task 2: Wiring Analysis | ⏳ Needs Multimeter | - | - | Estimated pinout in WIRING_DIAGRAM.md |
+| Task 3: Motor Identification | ✅ Done | 2026-03-02 | 2026-03-02 | Deep dive in 03-motor-and-control-system.md |
+| Task 4: Power Analysis | ⏳ Needs Multimeter | - | - | Estimated 12V DC, must verify |
