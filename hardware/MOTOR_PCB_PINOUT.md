@@ -2,6 +2,20 @@
 
 Reverse engineered from IMG_9503.JPG (front) and IMG_9505.JPG (back/traces).
 
+## Reference Photos
+
+### PCB Front
+![PCB Front](photos/initial-inspection/vending-pics/IMG_9503.JPG)
+
+### PCB Back (Traces)
+![PCB Back](photos/initial-inspection/vending-pics/IMG_9505.JPG)
+
+### Microswitch Detail
+![Microswitch](photos/initial-inspection/vending-pics/IMG_9891.JPG)
+
+### Motor Label
+![Motor Label](photos/initial-inspection/vending-pics/IMG_9507.JPG)
+
 ## PCB Overview
 
 **Board**: Single-layer PCB, dated 2010.06.23
